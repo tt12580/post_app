@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@micropost) do |f| %>
+        <%= render 'shared/error_messages',object: f.object %>
+        <%= f.label :Content %>
+        <%=  f.text_area :content,class: 'form-control' %>
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" id="exampleInputFile">
+        </div>
+        <%= link_to 'Back',root_path(f), class:'btn btn-primary' %>
+        <%= f.submit "New",class:'btn btn-primary' %>
+      <%end%>
+    </div>
+  </div>
+</div>

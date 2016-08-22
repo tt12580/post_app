@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <h1>Update</h1>
+    <div class="form-horizontal">
+      <div class="form-group">
+      <%= form_for(@micropost) do |f| %>
+        <%= render 'shared/error_messages',object: f.object %>
+        <%= f.label :Content %>
+        <%= f.text_area :content,class:'form-control' %>
+        <label for="exampleInput">File Inpit</label>
+        <input type="file" id="exampleInputFile">
+        <%= link_to 'Back',root_path(f),class:'btn btn-primary' %>
+        <%= f.submit "Update" ,class:'btn btn-primary'%>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

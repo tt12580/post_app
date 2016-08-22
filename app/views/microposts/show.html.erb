@@ -1,0 +1,15 @@
+<div class="row">
+  <aside class="col-md-6 col-md-offset-3">
+    <section class="user_info">
+      <h1><%= @micropost.title %></h1>
+      <span class="post-meta"><%= @micropost.created_at.to_s(:db) %></span><br>
+      <h3><%= @micropost.body %></h3>
+      <p>
+          <%= link_to 'Back',root_path(@micropost) %>
+          <%= link_to 'Edit' ,edit_micropost_path(@micropost) %>
+          <%= link_to 'Destroy', @micropost, method: :delete,
+                                    data: { confirm: 'Are you sure?' } %>
+      </p>
+      </aside>
+    </section>
+</div>
